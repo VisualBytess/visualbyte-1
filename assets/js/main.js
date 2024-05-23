@@ -42,7 +42,8 @@
 			});
 
 		}
-
+	
+		
 	// Fix: IE flexbox fix.
 		if (browser.name == 'ie') {
 
@@ -215,5 +216,5 @@
 			.on('load', function() {
 				$window.trigger('resize');
 			});
-
+			
 })(jQuery);

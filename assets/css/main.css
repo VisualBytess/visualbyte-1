@@ -142,6 +142,7 @@ a {
 			transform: scale(1) rotate(360deg);
 		}
 	}
+	
 /* Stile generale per la sezione */
 .section {
     display: flex;
@@ -401,6 +402,28 @@ a {
 			z-index: -1;
 		}
 	}
+/* Quattro */
+#quattro {
+    background: url("images/overlay.png"), url("../../images/two.jpg");
+    background-size: 256px 256px, cover;
+    background-attachment: fixed, fixed;
+    background-position: top left, center center;
+}
+
+#quattro .content {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInFromRight 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideInFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 	@keyframes spinner-hide {
 		0% {
