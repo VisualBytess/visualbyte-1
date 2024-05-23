@@ -281,57 +281,67 @@ a {
 			z-index: -1;
 		}
 	}
-	.content {
-		margin-bottom: 40px; /* Add space between text and image grid */
-	}
-	
-	.image-grid {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 20px; /* Spacing between the boxes */
-	}
-	
-	.image-box {
-		flex: 1 1 calc(33.333% - 20px); /* Responsive grid with 3 items per row */
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(135deg, rgba(238, 130, 238, 0.3), rgba(221, 160, 221, 0.7)); /* Light purple gradient background */
-		color: #fff; /* White text color */
-		font-size: 1.5em; /* Adjust as needed */
-		padding: 20px; /* Padding inside the boxes */
-		text-align: center;
-		border-radius: 10px; /* Rounded corners */
-		text-decoration: none; /* Remove underline from links */
-		transition: transform 0.3s, background 0.3s; /* Smooth transition on hover */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
-	}
-	
-	.image-box:hover {
-		background: linear-gradient(135deg, rgba(186, 85, 211, 0.3), rgba(147, 112, 219, 0.9)); /* Darker purple background on hover */
-		transform: scale(1.05); /* Slightly enlarge on hover */
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
-	}
-	
-	/* Responsive adjustments */
-	@media (max-width: 768px) {
-		.image-box {
-			flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
-		}
-	}
-	
-	@media (max-width: 480px) {
-		.image-box {
-			flex: 1 1 calc(100% - 20px); /* 1 item per row on phones */
-			font-size: 1.2em; /* Adjust font size for smaller screens */
-		}
-	
-		.content p {
-			font-size: 1em; /* Adjust font size for readability */
-			line-height: 1.5; /* Increase line height for better readability */
-		}
-	}
-	
+/* Stili generali */
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between the boxes */
+    justify-content: center; /* Center the grid items */
+}
+
+.image-box {
+    flex: 1 1 calc(33.333% - 20px); /* Responsive grid with 3 items per row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(238, 130, 238, 0.3), rgba(221, 160, 221, 0.7)); /* Light purple gradient background */
+    color: #fff; /* White text color */
+    font-size: 1.5em; /* Adjust as needed */
+    padding: 20px; /* Padding inside the boxes */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s, background 0.3s; /* Smooth transition on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.image-box:hover {
+    background: linear-gradient(135deg, rgba(186, 85, 211, 0.3), rgba(147, 112, 219, 0.9)); /* Darker purple background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-box {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        flex: 1 1 calc(100% - 20px); /* 1 item per row on phones */
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .content {
+        order: 1; /* Ensure content comes first */
+        width: 100%;
+    }
+
+    .image-grid {
+        order: 2; /* Ensure image grid comes after content */
+        width: 100%;
+    }
+
+    .content p {
+        font-size: 1em; /* Adjust font size for readability */
+        line-height: 1.5; /* Increase line height for better readability */
+        text-align: justify; /* Justify text for better appearance */
+        margin-bottom: 20px; /* Add margin below the text */
+    }
+}
+
 	
 	
 	@-webkit-keyframes spinner-hide {
