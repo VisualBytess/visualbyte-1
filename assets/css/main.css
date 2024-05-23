@@ -309,6 +309,21 @@ a {
 		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
 	}
 	
+	/* Responsive adjustments */
+	@media (max-width: 768px) {
+		.image-box {
+			flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.image-box {
+			flex: 1 1 calc(100% - 20px); /* 1 item per row on phones */
+			font-size: 1.2em; /* Adjust font size for smaller screens */
+		}
+	}
+	
+	
 	@-webkit-keyframes spinner-hide {
 		0% {
 			-moz-transform: scale(1) rotate(0deg);
